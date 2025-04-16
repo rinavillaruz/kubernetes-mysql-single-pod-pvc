@@ -1,6 +1,6 @@
 # Single Kubernetes MYSQL pod with Load Balancer, Persistent Volume and Persistent Volume Claim running on Minikube
 
-This repository contains YAML configurations to deploy a **MYSQL Single Pod with Load Balancer, PV, PVC using Minikube**.
+This repository contains YAML configurations to deploy a **Single Kubernetes MYSQL pod with Load Balancer, Persistent Volume and Persistent Volume Claim running on Minikube**.
 
 ## 🛠️ Features
 - **Load Balancer**
