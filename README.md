@@ -3,6 +3,7 @@
 This repository contains YAML configurations to deploy a **MYSQL Single Pod with PVC using Minikube**.
 
 ## 🛠️ Features
+- **Load Balancer**
 - **Persistent Volume**
 - **Persistent Volume Claim** 
 
