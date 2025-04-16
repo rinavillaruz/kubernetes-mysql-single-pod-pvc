@@ -31,8 +31,9 @@ tmux new-session -d -s mysql-dump-mount 'minikube mount ~/minikube-volumes/mysql
     Forwarding from 127.0.0.1:3306 -> 3306
     Forwarding from [::1]:3306 -> 3306
     Handling connection for 3306
-    Handling connection for 3306```
-## Use 127.0.0.1 as host, 3306 as port, root as username and password
+    Handling connection for 3306
+```
+Use 127.0.0.1 as host, 3306 as port, root as username and password
 
 ## 📝 To import a dump sql file
    ```sh
