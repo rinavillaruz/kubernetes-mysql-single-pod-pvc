@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  labels:
+    app: mysql-app
+    tier: database
+spec:
+  selector:
+    matchLabels:
+      app: mysql-app
+  replicas: 1
+  template:
+    metadata:
+      name: mysql
+      labels:
+        app: mysql-app
+        type: database
+    spec:
+      initContainers:
+          - name: fix-perms
+            image: busybox
+            command: ["sh", "-c", "chown -R 999:999 /data"]
+            volumeMounts:
+            - name: mysql-storage
+              mountPath: /data
+      containers:
+      - name: mysql
+        image: mysql:8.4
+        ports:
+          - containerPort: 3306
+        volumeMounts:
+          - mountPath: /data
+            name: mysql-storage
+          - mountPath: /dump
+            name: mysql-dump-storage
+        env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: root
+          - name: MYSQL_DATADIR
+            value: /data
+      volumes:
+        - name: mysql-storage
+          persistentVolumeClaim:
+            claimName: mysql-pvc-claim-1
+        - name: mysql-dump-storage
+          hostPath:
+            path: /dump
+            type: DirectoryOrCreate
