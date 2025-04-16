@@ -23,7 +23,8 @@ kubectl port-forward svc/mysql-service 3306:3306
 5. Use tmux to mount it and run on the background
 ```sh
 tmux new-session -d -s mysql-data-mount 'minikube mount $HOME/minikube-volumes/mysql-data:/var/lib/mysql'
-tmux new-session -d -s mysql-dump-mount 'minikube mount ~/minikube-volumes/mysql-dump:/dump'```
+tmux new-session -d -s mysql-dump-mount 'minikube mount ~/minikube-volumes/mysql-dump:/dump'
+```
 
 ## 📝 To connect to MySQL using any client, when you do port-forwarding, you will see something like this:
 ```sh
