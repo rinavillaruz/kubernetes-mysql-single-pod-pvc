@@ -20,7 +20,7 @@ This repository contains YAML configurations to deploy a **Single Kubernetes MYS
 kubectl port-forward svc/mysql-service 3306:3306
 ```
 4. Create a directory for mysql-data and mysql-dump.
-5. Install tmux.data
+5. Install tmux.
 5. Use tmux to mount it and run on the background
 ```sh
 tmux new-session -d -s mysql-data-mount 'minikube mount $HOME/minikube-volumes/mysql-data:/var/lib/mysql'
