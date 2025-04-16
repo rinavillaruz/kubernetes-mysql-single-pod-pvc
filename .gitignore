@@ -4,6 +4,7 @@
 # Allow .gitignore and .yml files
 !.gitignore
 !*.yml
+!*.md
 
 # Traverse
 !*/
