@@ -12,7 +12,7 @@ This repository contains YAML configurations to deploy a **MYSQL Single Pod with
 ## 🚀 Deployment Steps
 1. Clone this repo:
    ```sh
-   git clone https://github.com/rinavillaruz/terraform-aws-kubernetes.git
+   git clone https://github.com/rinavillaruz/kubernetes-mysql-single-pod-pvc.git
 2. Install Minikube.
 3. Use portforward instead of NodePort for Mac
 ```sh
