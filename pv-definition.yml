@@ -8,4 +8,4 @@ spec:
   capacity:
     storage: 10Gi
   hostPath:
-    path: /var/lib/mysql
+    path: /data

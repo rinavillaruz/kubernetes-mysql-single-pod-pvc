@@ -17,10 +17,12 @@ spec:
         app: mysql-app
         type: database
     spec:
+      securityContext:
+        fsGroup: 999
       initContainers:
           - name: fix-perms
             image: busybox
-            command: ["sh", "-c", "chown -R 999:999 /data"]
+            command: ["sh", "-c", "echo skipped chown"]
             volumeMounts:
             - name: mysql-storage
               mountPath: /data
